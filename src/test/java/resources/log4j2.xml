@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Download this xml code from "https://logging.apache.org/log4j/2.x/manual/configuration.html"
+ and to configure this with the project:Right click on the project(MavenJava) -> Build Path ->Configure Build path ->
+  Sources Tab -> Add Folder -> Select the folder under which this log4j2 is present i.e resources -->
+
+<!-- In this xml we have 2 sections:Appenders and Loggers
+     * Appenders is the block in which we mention where we want to print the output i.e Console, report etc. Here we have
+        mentioned it as  (name="Console"), so we asking to print in console 
+     * Loggers is the block in which we mention what kind of message we want to print i.e error,pass, fail, fatal etc. Here
+        we have mentioned  (level="trace") i.e it will print all kinds of message irrespective of error, pass etc. If we 
+        want to print only error message the we can simply write it as level="error"
+     * Root is the tag denotes that this is applicable to whole project-->
+
+
+<Configuration status="WARN">
+	<Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+
+  <Appenders>
+  	<RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="500" />
+    </RollingFile>
+  
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  
+  <Loggers>
+ 	 <Logger name="loggerAlpha.Demo" level="trace" additivity="false">
+      <AppenderRef ref="File"/>
+    </Logger>
+  
+    <Root level="trace">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
+

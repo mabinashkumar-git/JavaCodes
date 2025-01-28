@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-14T12:13:27Z" name="Suite" finished-at="2021-05-14T12:13:27Z" duration-ms="57">
+    <groups>
+    </groups>
+    <test started-at="2021-05-14T12:13:27Z" name="Test" finished-at="2021-05-14T12:13:27Z" duration-ms="57">
+      <class name="udemy.MavenJava.RESTAPITest">
+        <test-method signature="DemoRESTAPI1()[pri:0, instance:udemy.MavenJava.RESTAPITest@7d898981]" started-at="2021-05-14T12:13:27Z" name="DemoRESTAPI1" finished-at="2021-05-14T12:13:27Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoRESTAPI1 -->
+        <test-method signature="DemoRESTAPI2()[pri:0, instance:udemy.MavenJava.RESTAPITest@7d898981]" started-at="2021-05-14T12:13:27Z" name="DemoRESTAPI2" finished-at="2021-05-14T12:13:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoRESTAPI2 -->
+        <test-method signature="DemoRESTAPI3()[pri:0, instance:udemy.MavenJava.RESTAPITest@7d898981]" started-at="2021-05-14T12:13:27Z" name="DemoRESTAPI3" finished-at="2021-05-14T12:13:27Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoRESTAPI3 -->
+      </class> <!-- udemy.MavenJava.RESTAPITest -->
+      <class name="udemy.MavenJava.SeleniumTest">
+        <test-method signature="DemoSelenium1()[pri:0, instance:udemy.MavenJava.SeleniumTest@282cb7c7]" started-at="2021-05-14T12:13:27Z" name="DemoSelenium1" finished-at="2021-05-14T12:13:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoSelenium1 -->
+        <test-method signature="DemoSelenium2()[pri:0, instance:udemy.MavenJava.SeleniumTest@282cb7c7]" started-at="2021-05-14T12:13:27Z" name="DemoSelenium2" finished-at="2021-05-14T12:13:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoSelenium2 -->
+        <test-method signature="DemoSelenium3()[pri:0, instance:udemy.MavenJava.SeleniumTest@282cb7c7]" started-at="2021-05-14T12:13:27Z" name="DemoSelenium3" finished-at="2021-05-14T12:13:27Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoSelenium3 -->
+      </class> <!-- udemy.MavenJava.SeleniumTest -->
+      <class name="udemy.MavenJava.AppiumTest">
+        <test-method signature="DemoAppium1()[pri:0, instance:udemy.MavenJava.AppiumTest@5a9f4771]" started-at="2021-05-14T12:13:27Z" name="DemoAppium1" finished-at="2021-05-14T12:13:27Z" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoAppium1 -->
+        <test-method signature="DemoAppium2()[pri:0, instance:udemy.MavenJava.AppiumTest@5a9f4771]" started-at="2021-05-14T12:13:27Z" name="DemoAppium2" finished-at="2021-05-14T12:13:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoAppium2 -->
+        <test-method signature="DemoAppium3()[pri:0, instance:udemy.MavenJava.AppiumTest@5a9f4771]" started-at="2021-05-14T12:13:27Z" name="DemoAppium3" finished-at="2021-05-14T12:13:27Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DemoAppium3 -->
+      </class> <!-- udemy.MavenJava.AppiumTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

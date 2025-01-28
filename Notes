@@ -1,0 +1,40 @@
+* HeadLess Mode : Here chrome browser will not open but the scripts will be running in back end. One of the advantage is that when the scripts run we are unable to operate any other task in our system smoothly and it may also happen that while operating it may cause disturbance to the existing run and the script may fail abruptly.
+* "mvn test -Dbrowser = chrome/mvn test -Dbrowser = chromeheadless"  -> Command to run from mvn
+* If we mark a variable as Static then all objects shares common property i.e. no new object is created, the staic variable will be shared across all tests ( Refer video 221 )
+* If we are using Static variable then we can use while running the scripts in sequential manner but in case of parallel run we might run into null pointer error
+* For opening SQL server go to path in c drive -> "C:\Program Files\MySQL\MySQL Workbench 8.0" -> Double click on "MySQLWorkbench" application file
+
+Auto IT Steps:
+* //Shift focus to the file upload windows
+* //set text/path into file name edit box
+* //click open to upload file
+
+* Au3info- record window component objects
+* Build Script -scite.exe
+* Save it- .au3 extenstion
+* Convert file into .exe by compiling .au3 file
+* Call .exe file with Runtime class in java into your selenium tests
+
+* What is the difference between abstraction and encapsulation?
+  -> Abstraction hides the implementation details whereas encapsulation wraps code and data into a single unit.
+ 
+ List vs Set : 
+* List accepts duplicate values but Set do not accepts duplicated values 
+* List follows sequential order but set do not follow sequential order 
+
+HashMap vs HashSet :
+* HashMap is Non-Synchronized and not Thread safety but HashTable is synchronized and Thread safety
+* Performance of HashMap is faster than HashSet
+* HashMap allows one null Key and multiple null values but HashTable do not allows any null key or values
+* Iterator is use to iterate the values in HashMap whereas Enumerator is use to Iterate the value in HashTable
+
+* All static variables mentioned in a class level are "Class Variables"
+* All other variables except static variables mentioned in a class level are "Instance Variables"
+* All variables present in constructor are "Local Variables"
+
+* Static method will only have Static datamember
+
+
+  
+
+
