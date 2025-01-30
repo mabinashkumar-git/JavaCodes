@@ -9,8 +9,5 @@ import java.util.stream.Stream;
 
 public class Practise {
 
-    @Test
-    public void practise(){
 
-    }
 }
