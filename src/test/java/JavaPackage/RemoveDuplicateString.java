@@ -47,7 +47,10 @@ public class RemoveDuplicateString {
 	public void removeduplicateString1() {
 		
 		Stream.of("Sipun","Abinash","Abinash","Kumar","Mallick").distinct().forEach(s->System.out.println(s));
+		System.out.println("************** Next *****************");
 		Stream.of("Sipun","Abinash","Abinash","Kumar","Mallick").sorted().distinct().forEach(s->System.out.println(s));
+		System.out.println("************** Next1 *****************");
+		Stream.of("Abinash Kumar Mallick", "Abinash Abinash Kumar Kumar Mallick Mallick1").distinct().forEach(s -> System.out.println(s));
 		
 	}
 	
@@ -62,7 +65,9 @@ public class RemoveDuplicateString {
 		List<String> array1new = Arrays.asList(array1);
 		
 		arraynew.stream().distinct().sorted().forEach(s->System.out.println(s));
+
 		System.out.println("************** Next *****************");
+
 		Stream.concat(arraynew.stream(), array1new.stream()).sorted().forEach(s->System.out.println(s));
 		
 	}

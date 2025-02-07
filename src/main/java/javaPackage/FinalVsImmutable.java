@@ -21,7 +21,7 @@ public class FinalVsImmutable {
         // Here we will get Compile time error
         // Because reassignment is not possible for final variable
 //        sb = new StringBuffer("Hello World");
-        System.out.println(sb);
+//        System.out.println(sb);
     }
 
 }

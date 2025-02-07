@@ -27,7 +27,7 @@ public class Palindrome {
         // convert String to character array by using toCharArray
         char Name[] = InputName.toCharArray();
 
-        for (int i = Name.length - 1; i >= 0; i--) {
+        for (int i=Name.length-1; i>= 0; i--) {
         	char Reversename = Name[i];
         	System.out.println(Reversename);
 

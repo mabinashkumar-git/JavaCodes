@@ -16,14 +16,14 @@ public class PyramidFormat {
                 System.out.print(k++ + "\t");
 //                System.out.print("*" + "\t");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
 
 
         /* SEPARATING 2 DIFF PROGRAMME*/
-        System.out.println("");
+        System.out.println(" ");
         System.out.println("************************** ANOTHER ******************************");
-        System.out.println("");
+        System.out.println(" ");
 
         /*Target Output :
 
@@ -40,7 +40,7 @@ public class PyramidFormat {
                 System.out.print(k1++ + "\t");
 //                System.out.print("*" + "\t");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
 
     }
