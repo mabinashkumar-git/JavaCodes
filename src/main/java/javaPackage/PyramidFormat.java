@@ -3,7 +3,7 @@ package javaPackage;
 public class PyramidFormat {
     public static void main(String args[]){
 
-        /*Target Output :
+        /* Target Output :
 
 		   1 2 3 4                         * * * *
 		   5 6 7                  OR       * * *

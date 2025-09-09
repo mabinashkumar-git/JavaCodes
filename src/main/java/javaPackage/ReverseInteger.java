@@ -14,7 +14,6 @@ public class ReverseInteger {
             num = num/10;                          // remove the last digit from num
         }
         System.out.println("Reversed Number: " + reverse);
-
 	}
 
 }

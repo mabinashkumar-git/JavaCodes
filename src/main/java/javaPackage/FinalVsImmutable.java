@@ -15,7 +15,6 @@ public class FinalVsImmutable {
         // Even though reference variable sb is final
         // We can perform any changes
         sb.append(" Append World");
-
         System.out.println(sb);
 
         // Here we will get Compile time error

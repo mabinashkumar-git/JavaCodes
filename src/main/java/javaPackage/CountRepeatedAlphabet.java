@@ -1,5 +1,7 @@
 package javaPackage;
 
+import org.junit.jupiter.api.Test;
+
 public class CountRepeatedAlphabet {
 
     public  static void main(String args[]){
@@ -24,11 +26,10 @@ public class CountRepeatedAlphabet {
         }
         temp[j++] = a[n-1];
 
-        for(int i=0; i<n-1; i++)
-            a[i] = temp[i];
-
+        System.out.println("Name without duplicate char is -: ");
         for(int k=0; k<j; k++)
-            System.out.print(a[k]);
+            System.out.print(temp[k]);
+
         System.out.println("");
 
         System.out.print("Count of repeating char is " + count + " and char are : ");
@@ -36,5 +37,6 @@ public class CountRepeatedAlphabet {
             System.out.print(repeatChar[l] + " ");
         }
     }
+
 
 }

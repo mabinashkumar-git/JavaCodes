@@ -19,5 +19,4 @@ public class ReverseString {
             System.out.print(Name[i]);
 
 	}
-
 }

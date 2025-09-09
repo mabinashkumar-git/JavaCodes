@@ -15,4 +15,5 @@ public class MultiplyNoWithoutMultiplyOperator {
         }
         System.out.println("Multiplied no is :" + mulitpliednum);
     }
+
 }

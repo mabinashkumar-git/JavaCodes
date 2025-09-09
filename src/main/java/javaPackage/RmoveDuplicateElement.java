@@ -12,7 +12,7 @@ public class RmoveDuplicateElement {
 
         int A[] = {10,20,20,30,40,40,50,60,60,70,80,90,90};
         int n1 = A.length;
-        System.out.println("Original size :" + n1);
+//        System.out.println("Original size :" + n1);
 
         int temp[] = new int[n1];
         int j=0;
@@ -22,17 +22,14 @@ public class RmoveDuplicateElement {
                 if(A[i] != A[i+1]){
                     temp[j] = A[i];
                     j++;
-                    System.out.println("value of initial j :" + j);
+//                    System.out.println("value of initial j :" + j);
                 }
             }
             temp[j++] = A[n1-1];                           // Assigns the last value i.e temp[9] = A[12]
             System.out.println("value of j after :" + j);
 
-            for(int k=0; k<n1-1; k++)
-                A[k] = temp[k];
-
             for (int i = 0; i < j; i++)
-                System.out.print(A[i] + " ");
+                System.out.print(temp[i] + " ");
         }
 
     }

@@ -37,7 +37,7 @@ public class School {
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
         Date date = new Date();
-        System.out.println(formatter.format(date));
+        System.out.println("formatter.format(date) -: " + formatter.format(date));
 
 	}
 

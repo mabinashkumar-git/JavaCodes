@@ -2,7 +2,7 @@ package javaPackage;
 
 public class PrimeNumber {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         int num = 6;
         boolean flag = false;
 
@@ -21,4 +21,5 @@ public class PrimeNumber {
         else
             System.out.println(num + " is not a prime number.");
     }
+
 }

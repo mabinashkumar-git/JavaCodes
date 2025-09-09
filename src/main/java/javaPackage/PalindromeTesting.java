@@ -14,12 +14,12 @@ public class PalindromeTesting {
 
         for (int i = Name.length - 1; i >= 0; i--) {
             char Reversename = Name[i];
-            System.out.println(Reversename);
+            System.out.println("Reversename -: " + Reversename);
 
             Newname = Newname + Reversename;
         }
 
-        System.out.println(Newname);
+        System.out.println("Newname -: " + Newname);
 
         if(InputName.equalsIgnoreCase(Newname)) {
             System.out.println("Palindrome");
@@ -28,7 +28,6 @@ public class PalindromeTesting {
             System.out.println("Not Palindrome");
         }
     }
-
 
 
 }
