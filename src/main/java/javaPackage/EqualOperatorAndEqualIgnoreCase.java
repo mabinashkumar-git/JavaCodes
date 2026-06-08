@@ -1,9 +1,6 @@
 package javaPackage;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-public class School {
+public class EqualOperatorAndEqualIgnoreCase {
 	
 	public void Cal1(String FirstName, String Lastname) {
 		String s1 = FirstName;
@@ -13,7 +10,7 @@ public class School {
 			System.out.println(("S1 == S2"));
 		}
 		else {
-			System.out.println(("S1! == S2"));
+			System.out.println(("S1 != S2"));
 		}
 		
 		if (s1.equalsIgnoreCase(s2)) {
@@ -30,14 +27,14 @@ public class School {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hello");
-		School s = new School();
-		School s1 = new School();
+		EqualOperatorAndEqualIgnoreCase s = new EqualOperatorAndEqualIgnoreCase();
 		s.Cal1("Abinash", "Mallick");
+
+		System.out.println(" ");
+
+		System.out.println("Hello World");
+		EqualOperatorAndEqualIgnoreCase s1 = new EqualOperatorAndEqualIgnoreCase();
 		s1.Cal1("Abinash", "Abinash");
-		
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyy");
-        Date date = new Date();
-        System.out.println("formatter.format(date) -: " + formatter.format(date));
 
 	}
 

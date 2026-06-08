@@ -31,26 +31,55 @@ public class CreateNewArrayForMatchValues {
     /* ************************************************************ */
 
     @Test
-    public void practise(){
-        int A[] = {1,4,8,5,17,19};
-        int B[] = {2,4,9,5,18,19};
+    public void practise1() {
+        String name = "Night";
+        String name1 = "SightPlayer";
 
-        int temp[] = new int[A.length];
-        int j=0;
+        char[] ch = name.toCharArray();
+        char[] ch1 = name1.toCharArray();
 
-        for(int i=0; i<A.length; i++){
-            if(A[i] == B[i]){
-                temp[j] = A[i];
-                j++;
+        char temp[] = new char[name1.length()];
+        int j = 0;
+
+        for (int i = 0; i < name.length(); i++) {
+            for (int m = 0; m < name1.length(); m++) {
+                if (ch[i] == ch1[m]) {
+                    temp[j] = ch[i];
+                    j++;
+                }
             }
         }
-        System.out.println("Sorted array is :");
-        for(int k=0; k<j; k++){
+        System.out.println("Sorted common array is :");
+        for (int k = 0; k < j; k++) {
             System.out.print(temp[k] + "\t");
         }
         System.out.println("");
     }
 
+    /* ************************************************************ */
 
+    @Test
+    public void practise(){
+        String name = "Night";
+        String name1 = "SightPlayer";
+
+        char[] ch = name.toCharArray();
+        char[] ch1 = name1.toCharArray();
+
+        char temp[] = new char[name1.length()];
+        int j=0;
+
+        for(int i=0; i<name.length(); i++){
+            if(ch[i] == ch1[i]){
+                temp[j] = ch[i];
+                j++;
+            }
+        }
+        System.out.println("Sorted common array is :");
+        for(int k=0; k<j; k++){
+            System.out.print(temp[k] + "\t");
+        }
+        System.out.println("");
+    }
 
 }

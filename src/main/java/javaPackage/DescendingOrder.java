@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class DescendingOrder {
 
     @Test
-    public void asscendingOrder(){
+    public void descendingOrder(){
         int A[] = {5,3,7,2,1,9,6};
         int temp;
 

@@ -6,7 +6,8 @@ public class FinalVsImmutable {
 
     /* final means that you can’t change the object’s reference to point to another reference or another object,
        but you can still mutate its state (using setter methods e.g).
-    *  Whereas immutable means that the object’s actual value can’t be changed, but you can change its reference to another one. */
+    *  Whereas immutable means you can change its reference to another one but that the object’s actual value can’t be changed  */
+
     @Test
     public void finalVsImmutable(){
 

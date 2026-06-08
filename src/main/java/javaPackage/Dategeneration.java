@@ -20,7 +20,7 @@ public class Dategeneration {
 		
 		String currentdate = formater.format(date);
 		System.out.println("currentdate :" + currentdate);
-		System.out.println("Day,Date and Time -:" + date.toString());
+		System.out.println("Day, Date and Time -:" + date.toString());
 		
 		
 	}

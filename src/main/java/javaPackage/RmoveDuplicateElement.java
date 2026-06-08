@@ -28,7 +28,7 @@ public class RmoveDuplicateElement {
             temp[j++] = A[n1-1];                           // Assigns the last value i.e temp[9] = A[12]
             System.out.println("value of j after :" + j);
 
-            for (int i = 0; i < j; i++)
+            for (int i=0; i<j; i++)
                 System.out.print(temp[i] + " ");
         }
 
