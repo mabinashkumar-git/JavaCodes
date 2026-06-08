@@ -14,12 +14,15 @@ public class CountRepeatedAlphabet {
         int j=0;
         int count = 0;
 
-        for(int i=0; i<n-1; i++){
-            if(a[i] != a[i+1]){
+        for(int i=0; i<n-1; i++)
+        {
+            if(a[i] != a[i+1])
+            {
                 temp[j]= a[i];
                 j++;
             }
-            else{
+            else
+            {
                 repeatChar[count] = a[i];
                 count ++;
             }

@@ -2,16 +2,23 @@ package javaPackage;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.*;
 import java.time.Duration;
 import java.util.Set;
@@ -20,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 public class Selenium {
 
     @Test
-    public void PractiseSelenium() throws IOException {
+    public void PractiseSelenium() throws IOException, AWTException {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.amazon.in/");
@@ -176,6 +183,92 @@ public class Selenium {
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
         WebDriver driver1 = new ChromeDriver(options);
+
+        //code for handling browser navigation
+        driver.navigate().to("https://www.example.com"); // Navigate to a URL
+        driver.navigate().back(); // Navigate back
+        driver.navigate().forward(); // Navigate forward
+        driver.navigate().refresh(); // Refresh the page
+
+        //code for handling browser cookies
+        driver.manage().deleteAllCookies(); // Delete all cookies
+        driver.manage().deleteCookieNamed("cookieName"); // Delete a specific cookie by name
+
+        //code for handling browser window management
+        driver.manage().window().maximize(); // Maximize the browser window
+        driver.manage().window().fullscreen(); // Set the browser window to fullscreen
+
+        //code for handling browser timeouts
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS); // Set page load timeout
+        driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS); // Set script timeout
+
+        //code for handling browser alerts
+        Alert alert = driver.switchTo().alert();
+        alert.accept(); // Accept the alert
+        alert.dismiss(); // Dismiss the alert
+        alert.sendKeys("Input text"); // Send text to the alert (for prompts)
+
+        //code for handling browser frames
+        driver.switchTo().frame("frameNameOrId"); // Switch to a frame by name or ID
+        driver.switchTo().frame(0); // Switch to a frame by index
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='frameSource']"))); // Switch to a frame by WebElement
+        driver.switchTo().defaultContent(); // Switch back to the main content from a frame
+
+        // code for writing in capital letters using Actions class
+        WebElement inputField1 = driver.findElement(By.id("inputFieldId"));
+        Actions actions5 = new Actions(driver);
+        actions5.moveToElement(inputField1).click().keyDown(Keys.SHIFT).sendKeys("hello").keyUp(Keys.SHIFT).perform(); // Type "HELLO" in capital letters
+
+        //code for handling windows based pop-ups
+        // Note: Selenium cannot directly handle OS-level pop-ups, but you can use third-party tools like AutoIt (for Windows) or Robot class (for Java) to interact with such pop-ups.
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER); // Simulate pressing the Enter key to handle a pop-up
+        robot.keyRelease(KeyEvent.VK_ENTER); // Simulate releasing the Enter key
+
+        // Handle basic authentication pop-up by including credentials in the URL
+        driver.get("https://admin:admin@the.internet.com");
+
+        //code for handling AJAX calls
+        WebDriverWait wait1 = new WebDriverWait(driver, 10);
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("ajaxElementId"))); // Wait until the AJAX element is visible before interacting with it
+
+        //code for handling dynamic elements
+        WebDriverWait wait2 = new WebDriverWait(driver, 10);
+        wait2.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='dynamicElement']"))); // Wait until the dynamic element is present in the DOM before interacting with it
+
+        //code for using diff assertions
+        String expectedTitle = "Expected Page Title";
+        String actualTitle = driver.getTitle();
+        if (expectedTitle.equals(actualTitle)) {
+            System.out.println("Test Passed: Page title is as expected.");
+        } else {
+            System.out.println("Test Failed: Expected title '" + expectedTitle + "' but got '" + actualTitle + "'.");
+        }
+
+        //code for using TestNG or JUnit assertions
+        // Using JUnit assertions
+        Assert.assertEquals(expectedTitle, actualTitle, "Page title does not match the expected value.");
+
+        // Using TestNG assertions
+        Assertions.assertEquals(expectedTitle, actualTitle, "Page title does not match the expected value.");
+
+        //code for handling browser console logs
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        for (LogEntry entry : logEntries) {
+            System.out.println("[" + entry.getLevel() + "] " + entry.getMessage());
+        }
+
+        //code for locating elements using different strategies
+        WebElement elementById = driver.findElement(By.id("elementId"));
+        WebElement elementByName = driver.findElement(By.name("elementName"));
+        WebElement elementByClassName = driver.findElement(By.className("elementClass"));
+        WebElement elementByTagName = driver.findElement(By.tagName("elementTag"));
+        WebElement elementByLinkText = driver.findElement(By.linkText("Link Text"));
+        WebElement elementByPartialLinkText = driver.findElement(By.partialLinkText("Partial Link Text"));
+        WebElement elementByCssSelector = driver.findElement(By.cssSelector(".elementClass #elementId"));
+        WebElement elementByXPath = driver.findElement(By.xpath("//div[@class='elementClass']"));
+
+
 
 
     }

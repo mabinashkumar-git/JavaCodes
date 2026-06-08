@@ -21,7 +21,7 @@ public class AsscendingOrderORBubbleSort {
                 }
             }
         }
-        System.out.print("Array :");
+        System.out.print("Array -: ");
         for(int k=0; k<A.length; k++)
             System.out.print(A[k] + "\t");
     }
