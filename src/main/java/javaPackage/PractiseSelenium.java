@@ -2,11 +2,10 @@ package javaPackage;
 
 import org.junit.jupiter.api.Test;
 
-public class Practise {
+public class PractiseSelenium {
 
     @Test
-    public void practiseJava() {
-
+    public void practiseSeleniumTesting() {
 
     }
 }

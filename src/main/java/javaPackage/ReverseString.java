@@ -8,6 +8,8 @@ public class ReverseString {
 		/*Reversing by using StringBuffer */
 		StringBuffer name = new StringBuffer("Java programming is fun");
 	    System.out.println(name.reverse());
+
+		System.out.println("***************** Another Way **************");
 	    
 	    /****************** Another Way **************/
 	    
@@ -15,9 +17,8 @@ public class ReverseString {
         // convert String to character array by using toCharArray
         char Name[] = InputName.toCharArray();
  
-        for (int i = Name.length - 1; i >= 0; i--)
+        for (int i=Name.length-1; i>=0; i--)
             System.out.print(Name[i]);
 
 	}
-
 }

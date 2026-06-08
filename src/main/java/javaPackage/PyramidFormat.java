@@ -3,7 +3,7 @@ package javaPackage;
 public class PyramidFormat {
     public static void main(String args[]){
 
-        /*Target Output :
+        /* Target Output :
 
 		   1 2 3 4                         * * * *
 		   5 6 7                  OR       * * *
@@ -12,18 +12,18 @@ public class PyramidFormat {
 
         int k=1;
         for(int i=0; i<4; i++){
-            for(int j=1; j<=4-i; j++){
+            for(int j=0; j<4-i; j++){
                 System.out.print(k++ + "\t");
 //                System.out.print("*" + "\t");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
 
 
         /* SEPARATING 2 DIFF PROGRAMME*/
-        System.out.println("");
+        System.out.println(" ");
         System.out.println("************************** ANOTHER ******************************");
-        System.out.println("");
+        System.out.println(" ");
 
         /*Target Output :
 
@@ -40,7 +40,7 @@ public class PyramidFormat {
                 System.out.print(k1++ + "\t");
 //                System.out.print("*" + "\t");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
 
     }

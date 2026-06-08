@@ -19,8 +19,8 @@ public class Dategeneration {
 		Date date = new Date();
 		
 		String currentdate = formater.format(date);
-		System.out.println(currentdate);
-		System.out.println(date.toString());
+		System.out.println("currentdate :" + currentdate);
+		System.out.println("Day, Date and Time -:" + date.toString());
 		
 		
 	}
