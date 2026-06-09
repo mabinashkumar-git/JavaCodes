@@ -7,6 +7,7 @@ import java.util.List;
 
 public class RmoveDuplicateElement {
 
+    // code to remove duplicate element from array
     @Test
     public void removeDuplicatesInArray(){
 

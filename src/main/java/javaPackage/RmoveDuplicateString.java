@@ -7,6 +7,7 @@ import java.util.List;
 
 public class RmoveDuplicateString {
 
+    // code to remove duplicate string from a given string
     @Test
     public void removeDuplicateString(){
         String name = "abbcdddefgghii";

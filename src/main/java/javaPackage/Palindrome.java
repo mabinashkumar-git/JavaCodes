@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class Palindrome {
 
+	// code to check whether the given string is palindrome or not
 	public static void main(String[] args) {
 		
 		/*Reversing by using StringBuffer */

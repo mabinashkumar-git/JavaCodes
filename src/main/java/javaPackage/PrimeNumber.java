@@ -2,6 +2,7 @@ package javaPackage;
 
 public class PrimeNumber {
 
+    // code to check if a number is prime or not
     public static void main(String[] args){
         int num = 6;
         boolean flag = true;

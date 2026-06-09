@@ -1,6 +1,8 @@
 package javaPackage;
 
 public class PyramidFormat {
+
+    // code to print the following pyramid pattern :
     public static void main(String args[]){
 
         /* Target Output :

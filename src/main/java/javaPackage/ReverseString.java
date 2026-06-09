@@ -2,6 +2,7 @@ package javaPackage;
 
 public class ReverseString {
 
+	//code to reverse a string in java
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

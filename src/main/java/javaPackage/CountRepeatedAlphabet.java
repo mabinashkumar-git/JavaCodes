@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 
 public class CountRepeatedAlphabet {
 
+    // code to count repeated char in a string and also print the string without duplicate char
     public  static void main(String args[]){
-
         String name = "abbinnash";
         char[] a = name.toCharArray();
         int n = name.length();

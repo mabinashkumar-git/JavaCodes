@@ -2,6 +2,7 @@ package javaPackage;
 
 public class FibonacciSeries {
 
+    // code to print Fibonacci series up to 10 numbers
     public  static void main(String[] args){
         int a=0, b=1;
         System.out.print( " Fibonacci series is :\t" + a + "\t" + b);

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class MultiplyNoWithoutMultiplyOperator {
 
+    // code to multiply two numbers without using * operator.
     @Test
     public void multiplyNumber(){
         // Multiply two numbers, let's say 5 and 10. And get result as 50 but do not use * operator.
