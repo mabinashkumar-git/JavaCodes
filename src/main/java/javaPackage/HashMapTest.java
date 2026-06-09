@@ -6,7 +6,8 @@ import java.util.HashMap;
 import org.junit.Test;
 
 public class HashMapTest {
-	
+
+	// code to demonstrate the use of HashMap in Java
 	@Test
 	public void hashMap() {
 		HashMap<String, Integer> map = new HashMap<>();

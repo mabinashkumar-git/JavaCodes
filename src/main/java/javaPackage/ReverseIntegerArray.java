@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class ReverseIntegerArray {
 
+    // code to reverse an integer array and store it in another array
     @Test
     public void reverseIntegerArray(){
         int A[] =  {10, 20, 30, 40};

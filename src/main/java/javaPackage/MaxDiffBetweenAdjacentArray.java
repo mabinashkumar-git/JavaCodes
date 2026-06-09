@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class MaxDiffBetweenAdjacentArray {
 
+    // code to find the maximum difference between adjacent elements in an array
     @Test
     public void maxDiffBetweenAdjacentArray(){
         int A[] = {1,4,8,17,39,5,43};

@@ -2,6 +2,7 @@ package javaPackage;
 
 public class ReverseInteger {
 
+    // code to reverse an integer number
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         int num = 123456789, reverse = 0;

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class CreateNewArrayForMatchValues {
 
-
+    //code to create new array for matched values from two different arrays
     @Test
     public void arrayForMatchedValues(){
         int A[] = {1,4,8,5,17,19};

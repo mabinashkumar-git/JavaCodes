@@ -2,6 +2,7 @@ package javaPackage;
 
 public class Reverse3DigitNumber {
 
+    // code to reverse a 3 digit number
     public static void main(String args[]){
         int number = 537;
 

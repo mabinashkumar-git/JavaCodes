@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class DescendingOrder {
 
+    //code for bubble sort or descending order of array
     @Test
     public void descendingOrder(){
         int A[] = {5,3,7,2,1,9,6};
