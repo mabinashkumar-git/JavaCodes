@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -26,6 +27,11 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class Selenium {
+
+    //code for handling web elements using PageFactory
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
+    WebElement searchBoxGlobal;
+
 
     @Test
     public void PractiseSelenium() throws IOException, AWTException {
@@ -138,6 +144,8 @@ public class Selenium {
         //code for handling JavaScript scrolling
         js.executeScript("window.scrollBy(0, 500);"); // Scroll down by 500 pixels
         js.executeScript("window.scrollTo(0, document.body.scrollHeight);"); // Scroll to the bottom of the page
+        js.executeScript("window.scrollTo(0, 0);"); // Scroll to the top of the page
+        js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.id("elementId"))); // Scroll to a specific element
 
         //code for handling JavaScript interactions
         WebElement element3 = driver.findElement(By.id("elementId"));
@@ -194,8 +202,6 @@ public class Selenium {
                 break;
             }
         }
-
-
         Set<String> windowHandles = driver.getWindowHandles();
         System.out.println("Number of open windows/tabs: " + windowHandles.size());
         driver.switchTo().window(originalWindow); // Switch back to the original window/tab
