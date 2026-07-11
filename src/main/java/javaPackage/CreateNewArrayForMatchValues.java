@@ -25,6 +25,9 @@ public class CreateNewArrayForMatchValues {
         for(int k=0; k<j; k++){
             System.out.print(temp[k] + "\t");
         }
+
+        System.out.println("");
+        System.out.println("***********************************");
     }
 
 
@@ -49,11 +52,13 @@ public class CreateNewArrayForMatchValues {
                 }
             }
         }
-        System.out.println("Sorted common array is :");
+        System.out.println("Sorted common array for 2nd type is :");
         for (int k = 0; k < j; k++) {
             System.out.print(temp[k] + "\t");
         }
+
         System.out.println("");
+        System.out.println("***********************************");
     }
 
     /* ************************************************************ */
@@ -79,7 +84,9 @@ public class CreateNewArrayForMatchValues {
         for(int k=0; k<j; k++){
             System.out.print(temp[k] + "\t");
         }
+
         System.out.println("");
+        System.out.println("***********************************");
     }
 
 }

@@ -14,9 +14,9 @@ public class EqualOperator {
 
         String s = new String("Abinash");
 
-        System.out.println("a==b -:" + a==b);
-        System.out.println("a.equals(b) -:" + a.equals(b));
-        System.out.println("a.equals(s) -:" + a.equals(s));
-        System.out.println("a==s -:" + a==s);
+        System.out.println(a==b);
+        System.out.println(a.equals(b));
+        System.out.println(a.equals(s));
+        System.out.println(a==s);
     }
 }

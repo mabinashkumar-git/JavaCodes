@@ -26,13 +26,13 @@ public class EqualOperatorAndEqualIgnoreCase {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hello");
 		EqualOperatorAndEqualIgnoreCase s = new EqualOperatorAndEqualIgnoreCase();
 		s.Cal1("Abinash", "Mallick");
 
 		System.out.println(" ");
+		System.out.println("****************************************************");
+		System.out.println(" ");
 
-		System.out.println("Hello World");
 		EqualOperatorAndEqualIgnoreCase s1 = new EqualOperatorAndEqualIgnoreCase();
 		s1.Cal1("Abinash", "Abinash");
 
