@@ -26,8 +26,7 @@ public class Palindrome {
 		System.out.println("****************** Another Way ******************");
 
 		String InputName1 = "Nitin";
-		// convert String to character array by using toCharArray
-		char Name1[] = InputName1.toCharArray();
+		char Name1[] = InputName1.toCharArray();   //convert String to character array by using toCharArray
 		char[] temp = new char[Name1.length];
 		int j=0;
 
