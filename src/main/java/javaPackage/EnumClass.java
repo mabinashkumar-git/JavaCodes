@@ -2,22 +2,31 @@ package javaPackage;
 
 import org.junit.jupiter.api.Test;
 
-public class EnumClass {
+import static java.lang.System.out;
 
-    @Test
-    public void enumClass(){
-        System.out.println("Enum class is used to define a collection of constants that can be used to represent a fixed set of values." +
-                " It provides a way to define and group related constants together, making the code more readable and maintainable.");
+public enum EnumClass {
 
-        //code for enum class
-//        enum Day {
-//            SUNDAY,
-//            MONDAY,
-//            TUESDAY,
-//            WEDNESDAY,
-//            THURSDAY,
-//            FRIDAY,
-//            SATURDAY
-//        }
-    }
+//        System.out.println("Enum class is used to define a collection of constants that can be used to represent a fixed set of values." +
+//                " It provides a way to define and group related constants together, making the code more readable and maintainable.");
+
+        addPlaceAPI("/maps/api/place/add/json"),
+        getPlaceAPI("/maps/api/place/get/json"),
+        eletePlaceAPI("/maps/api/place/delete/json"),
+        addWebAPI("/normal/webapi/add"),
+        getWebAPI("/normal/webapi/all"),
+        deleteWebAPI("/normal/webapi/remove/"),
+        addBookAPI("/Library/Addbook.php"),
+        getBookAPIByAuthorName("/Library/GetBook.php"),
+        etBookAPIByID("/Library/GetBook.php");
+
+        private String resource;
+
+    EnumClass(String resource) {
+            this.resource = resource;
+        }
+
+        public String getResource() {
+            return resource;
+        }
+
 }
