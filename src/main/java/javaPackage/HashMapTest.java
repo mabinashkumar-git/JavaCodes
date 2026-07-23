@@ -2,6 +2,8 @@ package javaPackage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
 
 import org.junit.Test;
 
@@ -18,6 +20,23 @@ public class HashMapTest {
 		if(map.containsKey("Abinash")) {
 			System.out.print(map.get("Abinash"));
 		}
+
+
+		HashSet<String> set = new HashSet<>();
+		set.add("Abinash");
+		set.add("Kumar");
+		set.add("Mallick");
+		set.add("Abinash");
+		System.out.println(set);
+		System.out.println(set);
+
+
+		Hashtable<String, Integer> table = new Hashtable<>();
+		table.put("Abinash", 29);
+		table.put("Kumar", 39);
+		table.put("Mallick", 49);
+		System.out.println(table);
+		System.out.println(table.get("Abinash"));
 	}
 
 }
