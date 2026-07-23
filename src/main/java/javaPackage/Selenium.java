@@ -33,6 +33,7 @@ public class Selenium {
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     WebElement searchBoxGlobal;
 
+    // code for highlighting an element using JavaScriptExecutor
     public void highlightElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border='3px solid red'", element);
@@ -44,6 +45,9 @@ public class Selenium {
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless");           // Run Chrome in headless mode
         WebDriver driver = new ChromeDriver(options);
+
+        Actions actions = new Actions(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
         try{
             driver.get("https://rahulshettyacademy.com/AutomationPractice/");
@@ -79,33 +83,28 @@ public class Selenium {
 
             //code for double click
             WebElement element = driver.findElement(By.id("twotabsearchtextbox"));
-            Actions actions = new Actions(driver);
             actions.doubleClick(element).perform();
 
 
             //code for right click
             WebElement element1 = driver.findElement(By.id("twotabsearchtextbox"));
-            Actions actions1 = new Actions(driver);
-            actions1.contextClick(element1).perform();
+            actions.contextClick(element1).perform();
 
 
             //code for mouse hover
             WebElement element2 = driver.findElement(By.id("nav-link-accountList"));
-            Actions actions2 = new Actions(driver);
-            actions2.moveToElement(element2).perform();
+            actions.moveToElement(element2).perform();
 
 
             //code for drag and drop
             WebElement source = driver.findElement(By.id("sourceElementId"));
             WebElement target = driver.findElement(By.id("targetElementId"));
-            Actions actions3 = new Actions(driver);
-            actions3.dragAndDrop(source, target).perform();
+            actions.dragAndDrop(source, target).perform();
 
 
             //code for keyboard actions
             WebElement inputField = driver.findElement(By.id("inputFieldId"));
-            Actions actions4 = new Actions(driver);
-            actions4.sendKeys(inputField, "Hello").perform();
+            actions.sendKeys(inputField, "Hello").perform();
 
 
             //code for handling alerts
@@ -155,7 +154,7 @@ public class Selenium {
 
 
             //code for handling JavaScript alerts
-            JavascriptExecutor js = (JavascriptExecutor) driver;
+//            JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("alert('This is a JavaScript alert!');"); // Trigger a JavaScript alert
             driver.switchTo().alert().accept(); // Accept the alert
 
@@ -277,8 +276,7 @@ public class Selenium {
 
             // code for writing in capital letters using Actions class
             WebElement inputField1 = driver.findElement(By.id("inputFieldId"));
-            Actions actions5 = new Actions(driver);
-            actions5.moveToElement(inputField1).click().keyDown(Keys.SHIFT).sendKeys("hello").keyUp(Keys.SHIFT).perform(); // Type "HELLO" in capital letters
+            actions.moveToElement(inputField1).click().keyDown(Keys.SHIFT).sendKeys("hello").keyUp(Keys.SHIFT).perform(); // Type "HELLO" in capital letters
 
 
             //code for handling windows based pop-ups
@@ -293,13 +291,12 @@ public class Selenium {
 
 
             //code for handling AJAX calls
-            WebDriverWait wait1 = new WebDriverWait(driver, 10);
-            wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("ajaxElementId"))); // Wait until the AJAX element is visible before interacting with it
+//            WebDriverWait wait = new WebDriverWait(driver, 10);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ajaxElementId"))); // Wait until the AJAX element is visible before interacting with it
 
 
             //code for handling dynamic elements
-            WebDriverWait wait2 = new WebDriverWait(driver, 10);
-            wait2.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='dynamicElement']"))); // Wait until the dynamic element is present in the DOM before interacting with it
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='dynamicElement']"))); // Wait until the dynamic element is present in the DOM before interacting with it
 
 
             //code for using diff assertions

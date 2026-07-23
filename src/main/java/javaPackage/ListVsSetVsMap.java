@@ -20,6 +20,7 @@ public class ListVsSetVsMap {
         Set<String> set = new HashSet<>();
         set.add("Apple");
         set.add("Banana");
+        set.add("Mango");
         set.add("Apple"); // Duplicate not allowed
         System.out.println("Set: " + set);
 
