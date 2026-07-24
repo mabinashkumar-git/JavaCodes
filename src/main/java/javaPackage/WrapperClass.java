@@ -13,11 +13,11 @@ public class WrapperClass {
 
         // Example of wrapper class
         int a = 10;
-        Integer b = Integer.valueOf(a); // converting int to Integer object
+        Integer b = Integer.valueOf(a);             // converting int to Integer object
         System.out.println("Value of b: " + b);
 
-        Integer c = new Integer(20); // creating Integer object
-        int d = c.intValue(); // converting Integer object to int
+        Integer c = new Integer(20);          // creating Integer object
+        int d = c.intValue();                       // converting Integer object to int
         System.out.println("Value of d: " + d);
     }
 }

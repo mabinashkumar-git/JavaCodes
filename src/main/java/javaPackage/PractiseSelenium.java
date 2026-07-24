@@ -16,44 +16,7 @@ import java.util.Properties;
 
 public class PractiseSelenium {
 
-    @FindBy(name = "q")
-    WebElement username;
-
-    @FindBy(name = "q")
-    WebElement password;
-
-
-
     @Test
     public void practiseSeleniumTesting() {
-
-        WebDriver driver = new ChromeDriver();
-//        WebDriver driver1 = new FirefoxDriver();
-//        WebDriver driver2 = new SafariDriver();
-
-        Properties properties = new Properties();
-        properties.setProperty("browser", properties.getProperty("chromeBrowser"));
-
-        driver.get("https://www.google.com/");
-
-        // code for fluent wait
-
-        FluentWait fluentWait = new FluentWait(driver);
-         fluentWait.withTimeout(java.time.Duration.ofSeconds(30))
-                 .pollingEvery(java.time.Duration.ofSeconds(5));
-
-
-         WebElement element = driver.findElement(By.name("q"));
-         element.sendKeys("Selenium");
-
-         username.sendKeys("Selenium");
-         password.sendKeys("Selenium");
-
-         List<WebElement> rows = driver.findElements(By.xpath("//table[@id='customers']/tbody/tr"));
-            for(WebElement row : rows){
-                System.out.println(row.getText());
-            }
-
-
     }
 }

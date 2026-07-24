@@ -34,7 +34,7 @@ public class Palindrome {
 			temp[j] = Name1[i];
 			j++;
 		}
-		String Newname1 = String.valueOf(temp);
+		String Newname1 = String.valueOf(temp);          //convert character array to String by using String.valueOf
 		System.out.println("Newname1 -:" + Newname1);
 
 		if(Newname1.equalsIgnoreCase(InputName1)) {

@@ -7,6 +7,7 @@ public class EqualOperator {
     /* When two variables are created with same value, then only a single object is created i.e. for line 12 & 13, only a single
        object is created. So a==b is true
        But a==s is false as there are two diff objects created */
+
     @Test
     public void equalOperator(){
         String a = "Abinash";

@@ -12,6 +12,7 @@ public class ListVsSetVsMap {
     public static void main(String[] args) {
         // Example usage of List, Set, and Map
         List<String> list = new ArrayList<>();
+//        ArrayList<String> list1 = new ArrayList<>();
         list.add("Apple");
         list.add("Banana");
         list.add("Apple"); // Duplicate allowed
@@ -29,5 +30,6 @@ public class ListVsSetVsMap {
         map.put("Banana", 2);
         map.put("Apple", 3); // Key is unique, value will be updated
         System.out.println("Map: " + map);
+
     }
 }
