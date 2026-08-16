@@ -12,11 +12,12 @@ public class PrimeNumber {
         }
 
         for(int i=2; i<=num/2; i++){
-            if(num%i == 0){
+            if(num % i == 0){
                 flag = false;
                 break;
             }
         }
+
         if(flag == true)
             System.out.println(num + " is a prime number.");
         else

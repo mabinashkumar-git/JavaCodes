@@ -26,8 +26,7 @@ public class Palindrome {
 		System.out.println("****************** Another Way ******************");
 
 		String InputName1 = "Nitin";
-		// convert String to character array by using toCharArray
-		char Name1[] = InputName1.toCharArray();
+		char Name1[] = InputName1.toCharArray();   //convert String to character array by using toCharArray
 		char[] temp = new char[Name1.length];
 		int j=0;
 
@@ -35,7 +34,7 @@ public class Palindrome {
 			temp[j] = Name1[i];
 			j++;
 		}
-		String Newname1 = String.valueOf(temp);
+		String Newname1 = String.valueOf(temp);          //convert character array to String by using String.valueOf
 		System.out.println("Newname1 -:" + Newname1);
 
 		if(Newname1.equalsIgnoreCase(InputName1)) {

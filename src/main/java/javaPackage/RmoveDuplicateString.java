@@ -20,10 +20,9 @@ public class RmoveDuplicateString {
             if(name1[i] != name1[i+1]){
                 temp[j] = name1[i];
                 j++;
-//                System.out.println("value of initial j :" + j);
             }
         }
-        temp[j++] = name1[n1-1];                  // Assigns the last value i.e temp[9] = A[12].
+        temp[j++] = name1[n1-1];                       // Assigns the last value i.e temp[9] = A[12].
         System.out.println("value of j after :" + j);
 
         for(int i=0; i<j; i++) {

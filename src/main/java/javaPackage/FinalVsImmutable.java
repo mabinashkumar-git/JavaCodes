@@ -6,7 +6,8 @@ public class FinalVsImmutable {
 
     /* final means that you can’t change the object’s reference to point to another reference or another object,
        but you can still mutate its state (using setter methods e.g).
-    *  Whereas immutable means you can change its reference to another one but that the object’s actual value can’t be changed  */
+    *  Whereas immutable means you can change its reference to another one but that the object’s actual value can’t be changed
+    *  https://www.geeksforgeeks.org/java/final-vs-immutability-java/  */
 
     @Test
     public void finalVsImmutable(){
@@ -17,6 +18,15 @@ public class FinalVsImmutable {
         // We can perform any changes
         sb.append(" Append World");
         System.out.println(sb);
+
+        // Here we can reassign the reference variable name to another String object
+        String name = "Srinath";
+        String original = name; // 'original' also points to "Srinath"
+
+        name = "Srinath Reddy"; // name now points to a NEW object
+
+        System.out.println(name);     // Srinath Reddy
+        System.out.println(original); // Srinath — unaffected!
 
         // Here we will get Compile time error
         // Because reassignment is not possible for final variable
