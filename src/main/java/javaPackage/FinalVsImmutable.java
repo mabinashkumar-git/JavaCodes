@@ -19,6 +19,15 @@ public class FinalVsImmutable {
         sb.append(" Append World");
         System.out.println(sb);
 
+        // Here we can reassign the reference variable name to another String object
+        String name = "Srinath";
+        String original = name; // 'original' also points to "Srinath"
+
+        name = "Srinath Reddy"; // name now points to a NEW object
+
+        System.out.println(name);     // Srinath Reddy
+        System.out.println(original); // Srinath — unaffected!
+
         // Here we will get Compile time error
         // Because reassignment is not possible for final variable
 //        sb = new StringBuffer("Hello World");

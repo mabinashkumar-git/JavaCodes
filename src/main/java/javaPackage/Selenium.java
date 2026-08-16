@@ -33,6 +33,18 @@ public class Selenium {
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     WebElement searchBoxGlobal;
 
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']/following-sibling::input[@type='submit']")
+    WebElement testLocator;
+
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']/parent::div/following-sibling::div//input[@type='submit']")
+    WebElement testLocator1;
+
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']/ancestor::div[@id='nav-search']/descendant::input[@type='submit']")
+    WebElement testLocator2;
+
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']/preceding-sibling::input[@type='submit']")
+    WebElement testLocator3;
+
     // code for highlighting an element using JavaScriptExecutor
     public void highlightElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -135,6 +147,7 @@ public class Selenium {
             WebElement option = driver.findElement(By.xpath("//option[@value='optionValue']"));
             option.click(); // Select the desired option
 
+
             Select select = new Select(dropdown);
             select.selectByVisibleText("Option Text"); // Select by visible text
             select.selectByValue("optionValue"); // Select by value
@@ -167,9 +180,9 @@ public class Selenium {
             driver.switchTo().alert().accept(); // Accept the confirmation
 
             //code for handling JavaScript scrolling
-            js.executeScript("window.scrollBy(0, 500);"); // Scroll down by 500 pixels
+            js.executeScript("window.scrollBy(0, 500);");                        // Scroll down by 500 pixels
             js.executeScript("window.scrollTo(0, document.body.scrollHeight);"); // Scroll to the bottom of the page
-            js.executeScript("window.scrollTo(0, 0);"); // Scroll to the top of the page
+            js.executeScript("window.scrollTo(0, 0);");                          // Scroll to the top of the page
             js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.id("elementId"))); // Scroll to a specific element
 
             //code for handling JavaScript interactions
@@ -345,4 +358,5 @@ public class Selenium {
         }
 
     }
+
 }

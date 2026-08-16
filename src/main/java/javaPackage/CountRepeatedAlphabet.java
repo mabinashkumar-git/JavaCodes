@@ -18,7 +18,8 @@ public class CountRepeatedAlphabet {
             if (a[i] != a[i + 1]) {
                 temp[j] = a[i];
                 j++;
-            } else {
+            }
+            else {
                 repeatChar[count] = a[i];
                 count++;
             }

@@ -28,7 +28,6 @@ public class HashMapTest {
 		set.add("Mallick");
 		set.add("Abinash");
 		System.out.println(set);
-		System.out.println(set);
 
 
 		Hashtable<String, Integer> table = new Hashtable<>();
