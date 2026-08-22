@@ -1,0 +1,75 @@
+# This command creates database
+create database QaDataBaseTest;
+
+# Points to database in which we will perform operations
+use sys;
+
+create table StudentDetailsRO(Name varchar(20), ID int, Age int, Gender varchar(20), Location varchar(20));
+describe StudentDetailsRO;
+insert into StudentDetailsRO values('Abinash', 1234, 31, 'F', 'Hybd');
+insert into StudentDetailsRO values('Aakash', 5678, 30, 'M', 'Kol');
+insert into StudentDetailsRO values('Ganesh',9101, 30, 'M',  'Hybd');
+insert into StudentDetailsRO values('Anil', 1213, 30, 'F', 'Kol');
+insert into StudentDetailsRO values('Niki', 1415, 31, 'M', 'Bbsr');
+insert into StudentDetailsRO values('Durga', 1617, 31, 'M', 'Kol');
+
+select * from StudentDetailsRO;
+select * from StudentDetailsRO order by Name asc;
+select distinct Age from StudentDetailsRO;
+drop table StudentDetailsRO;
+
+
+create table Grades(Grade varchar(20), ID int, Marks double);
+describe Grades;
+insert into Grades values('A', 5678, 90);
+insert into Grades values('B', 9101, 80);
+insert into Grades values('A', 1213, 92);
+insert into Grades values('C', 1415, 65);
+insert into Grades values('B', 2348, 79);
+
+select * from Grades;
+select * from Grades order by Marks desc;
+select * from Grades where Marks = (select max(Marks) from Grades);
+select distinct Marks from Grades order by Marks desc limit 1;
+select max(Marks) as secondHighest from Grades where Marks < (select max(Marks) from Grades);
+select distinct Marks from Grades order by Marks desc limit 1 offset 1;
+select * from Grades where Marks = (select min(marks) from grades);
+select min(Marks) as secondLowest from Grades where Marks > (select min(Marks) from Grades);
+
+drop table Grades;
+
+
+select * from StudentDetailsRO as sd join Grades as gd;
+select * from StudentDetailsRO as sd join Grades as gd on sd.ID = gd.ID;
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd join Grades as gd on sd.ID = gd.ID;
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd inner join Grades as gd on sd.ID = gd.ID;
+
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd left join Grades as gd on sd.ID = gd.ID;
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID;
+
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID order by Name desc;
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID order by Name asc;
+
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID where marks = (select max(Marks) from Grades);
+
+select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID where Name like 'A%';
+
+create view TableStartsWithA as select sd.Name, sd.ID, sd.Age, sd.Gender, sd.Location, gd.Grade, gd.Marks from StudentDetailsRO as sd right join Grades as gd on sd.ID = gd.ID where Name like 'A%';
+select * from TableStartsWithA;
+
+
+
+
+create table School(Name varchar(20), District varchar(20), Strength int);
+describe School;
+insert into School values('KV-MCS', 'Khorda', 5000);
+insert into School values('KV-CRPF', 'Khorda', 7000);
+insert into School values('KV-PURI', 'Puri', 3000);
+insert into School values('KV-JAJPUR', 'Jajpur', 1500);
+select * from School;
+drop table School;
+
+rename table School to Schools;
+describe Schools;
+select * from Schools;
+
