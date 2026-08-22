@@ -1,6 +1,14 @@
 package javaPackage;
 
+//import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class RandomProgramme {
+
     public static void main(String[] args) {
         String input = "AbinashMallick123456";
 
@@ -27,5 +35,31 @@ public class RandomProgramme {
         // Output
         System.out.println(lastName + " " + firstName);
         System.out.println("Sum of digits: " + sum);
+
+        // Call the printDuplicateElements method
+        RandomProgramme programme = new RandomProgramme();
+        programme.printDuplicateElements();
+    }
+
+
+    public void printDuplicateElements() {
+        List<String> names = Arrays.asList("Abinash", "Aakash", "Abinash", "Deepak", "Aakash");
+        Map<String, Integer> nameCount = new HashMap<>();
+
+        // Count occurrences of each name
+        for (String name : names) {
+            nameCount.put(name, nameCount.getOrDefault(name, 0) + 1);
+        }
+
+        // Print duplicate elements
+        System.out.println(" ");
+        System.out.println("*********************************");
+        System.out.println(" ");
+        System.out.println("Duplicate elements:");
+        for (Map.Entry<String, Integer> entry : nameCount.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey());
+            }
+        }
     }
 }
